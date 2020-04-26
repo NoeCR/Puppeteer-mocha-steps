@@ -1,0 +1,23 @@
+{
+  "name": "pptr-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha ./build/test/**.js --require mocha-steps --recursive --timeout=30000 --retries 2 --exit",
+    "clean": "rm -rf build",
+    "build": "babel --preset es2015 -d build/ src/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "mocha-steps": "^1.3.0",
+    "puppeteer": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
